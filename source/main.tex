@@ -31,17 +31,18 @@
         Potential Fellow: David O'Ryan \\
         Potential Mentor(s): Bruno Alteiri \& Bruno Merin}}
     \end{center}
-\vspace{-7mm}
-\begin{abstract}
-\vspace{-3.5mm}
-Relating the fundamental parameters of galaxies to a multitude of underlying processes and their morphology is a notoriously difficult task. Often, data containing fully parameterised galaxies is sparse (or concentrated in specific areas of the sky) while morphological classification data of galaxies is limited. Rarely do these sets of data overlap. The result of this is that we have a complete disconnect between investigating the morphological relationship of galaxies with their parameterisation. By using the newly released convolutional network \texttt{Zoobot} from the Galaxy Zoo collaboration and the recently launched Euclid observatory, I will rectify this. I will create the largest catalogue of morphologically classified galaxies with complete ancillary data to date. This catalogue will be similar to the COSMOS catalogue, but across the entire sky. We will conduct initial analysis of this catalogue before releasing it to the community for further use. We will conduct initial analysis of this catalogue, linking a multitude of parameters with morphology, and inferring links between underlying physical processes within galaxies to their parameters and morphology. We will also conduct in depth analysis of a specific galaxy type in this catalogue to show its power: interacting galaxies. 
-\end{abstract}
+    
+% \vspace{-7mm}
+% \begin{abstract}
+% \vspace{-3.5mm}
+% Relating the fundamental parameters of galaxies to a multitude of underlying processes and their morphology is a notoriously difficult task. Often, data containing fully parameterised galaxies is sparse (or concentrated in specific areas of the sky) while morphological classification data of galaxies is limited. Rarely do these sets of data overlap. The result of this is that we have a complete disconnect between investigating the morphological relationship of galaxies with their parameterisation. By using the newly released convolutional network \texttt{Zoobot} from the Galaxy Zoo collaboration and the recently launched Euclid observatory, I will rectify this. I will create the largest catalogue of morphologically classified galaxies with complete ancillary data to date. This catalogue will be similar to the COSMOS catalogue, but across the entire sky. We will conduct initial analysis of this catalogue before releasing it to the community for further use. We will conduct initial analysis of this catalogue, linking a multitude of parameters with morphology, and inferring links between underlying physical processes within galaxies to their parameters and morphology. We will also conduct in depth analysis of a specific galaxy type in this catalogue to show its power: interacting galaxies. 
+% \end{abstract}
 
 \vspace{-5mm}
 \justification
 \vspace{-3mm}
-\noindent\textbf{Linking Morphology with Galaxy Parameterisation} \\
-Galaxy parameterisation is nothing new in the field of astrophysics. By measuring specific emission lines in galaxies, it is possible to conduct spectral energy distribution (SED) fitting to infer their masses, star formation rates, etc. This allows us to make interesting links between physical processes occurring within them. An example of such a catalogue that has seen much use over the last fifteen years is the COSMIC Evolution Survey (COSMOS) \citep{cosmos catalogue}. This catalogue contained the measured emission lines of 1.7 million galaxies in a 3$^{\circ} \times $3$^{\circ}$ area of the sky. Not only does it contain their emissions, but also their parameterisations (stellar masses, luminosities, photometric redshifts, star formation rates, etc) calculated by the COSMOS team. This catalogue has therefore been used in multiple papers (at time of writing, easily 1000+) to investigate the properties of different types of galaxies. These different types can be interacting galaxies, spiral galaxies, elliptical galaxies, barred galaxies, etc.
+\noindent\textbf{Linking Morphology with Photometric Galaxy Parameterisation} \\
+Photometric parameterisation of galaxies is nothing new in the field of astrophysics. By measuring specific emission lines in galaxies, it is possible to conduct spectral energy distribution (SED) fitting to infer their masses, star formation rates, etc. This allows us to make interesting links between physical processes occurring within them. An example of such a catalogue that has seen much use over the last fifteen years is the COSMIC Evolution Survey (COSMOS) \citep{cosmos catalogue}. This catalogue contained the measured emission lines of 1.7 million galaxies in a 3$^{\circ} \times $3$^{\circ}$ area of the sky. Not only does it contain their emissions, but also their parameterisations (stellar masses, luminosities, photometric redshifts, star formation rates, etc) calculated by the COSMOS team. This catalogue has therefore been used in multiple papers (at time of writing, easily 1000+) to investigate the properties of different types of galaxies. These different types can be interacting galaxies, spiral galaxies, elliptical galaxies, barred galaxies, etc.
 
 The key to understanding the relationship between different types of galaxies and the processes within them is to have statistically significant samples of galaxies. While 1.7 million is certainly statistically significant in itself, it is over X\% of the sky. Also, once we start to split these 1.7 million into the multiple kinds of galaxies we want to investigate, we begin to lose that statistical completeness. Often users will have existing catalogues of a type of galaxy they want to investigate which only partially overlaps with the area COSMOS covers. (need to give examples here). Therefore, much of a specific sample does not have their parameters available for them for full investigation and cannot be used. This can be particulary true when linking galaxy parameterisation to morphology.
 
@@ -88,36 +89,51 @@ Using the catalogues generated here, interacting galaxies will be identified (si
 \describearchival
 \vspace{-3mm}
 \noindent\textbf{Project Timeline \& Project Results} \\
-\noindent The timeline described in this section assumes a project timescale of 3 years. However, we account for the fact this might only be a two year project by planning to have our main result (the release of the ancillary catalogues) conducted by the end of the second year. The first year of this project will primarily be focused on developing the code to extract excellent cutouts of all sources in the \texttt{Hubble} source catalogue. While I currently have the code to generate these cutouts from my internship, some refinements must be made. Specifically, the size of the cutout must be based upon the size of the source within it. This will ensure the source is fully resolved in the cutout; an issue discovered when keeping a fixed cutout size in the \citet{O'Ryan} catalogue. This time will also be used to test the accuracy of \texttt{Zoobot} through different \texttt{Hubble} filters and instruments. For these tests I will need to create training sets of different galaxies with full descriptions from Galaxy Zoo.
-
-Once the code is created and tested, it will be run on the entire \texttt{Hubble} archives across all filters and instruments. The classification will take some time. From the creation of the \citet{O'Ryan} catalogue, 92 million sources took approximately one month to classify. As we add further source catalogues or instruments into our pipeline, the classification process itself may take more than this. We therefore schedule in 2.5 months for this process. As this process continues, I will shift my focus to the secondary goals of this project. I will begin to investigate Euclid data and get acquainted with it. I will focus my attention on interacting galaxies and further constraining the \citet{O'Ryan} catalogue. I will also have access to the results as they come in, allowing me to investigate the results and make some preliminary investigations into what we might find. I will also begin building the pipeline that will utilise the ancillary data to compute each galaxies parameterisation.
-
-Finally, in the third year of this project, I will conduct the key analysis of the full catalogue we create. I will present an initial review of the parameter space we have covered as well as the limitations of the catalogue. I will the conduct an investigation into the different types of galaxies vs the parameterisations we have made. I will pick out the interacting galaxies for an example paper of how to use the catalogue, and do a in-depth exploration of their parameter space. To finalise the project, I will conduct my own analysis of the new interacting galaxy sample and apply the software developed in my PhD to completely match the underlying parameter space to tidal features that form. \\
+\noindent The timeline described in this section assumes a project timescale of 3 years and is laid out as shown in Fig \ref{fig:gantt-chart}. Each specific part of the project has been broken down into different work packages (WP) and then broken down into tasks to be completed. The definition of of each work package, and the tasks involved is explained below.
 
 \begin{figure}
     \centering
-    \includegraphics{}
-    \caption{Caption}
+    \includegraphics[width = \textwidth]{figures/draft-gantt.png}
+    \caption{GANTT chart detailing the timelines planned for the four Work Packages defined in this proposal. As shown, it is expected that four distinct papers will be published from this project, primarily detailing new catalogues with incredibly useful ancillary data for the community. The final paper will be a direct demonstration of the power of these catalogues using them to investigate and statistically constrain interacting galaxies.}
     \label{fig:gantt-chart}
 \end{figure}
 
+\noindent \textbf{WP 1: Building the Classification Pipeline, Training and Creating a Morphological Catalogue} In order to classify the morphology of greater than 126 millions sources, a robust pipeline will need to be built. This pipeline must be able to: create reasonable source cutouts in a general way, be able to identify bad cutouts, feed them into a trained classifier and be fully diagnostically checked before running on the full sample and classifying every source. In my internship at ESAC, this part was the bulk of the project. I, therefore, will be putting at least 4 quarters into this part. This work package will also include the writing up of a large data release as well as a breakdown of objects of interest found. This resultant paper will be analogous to \citet{O'Ryan}.
+
+\noindent \textbf{WP 2: Analysing Morphological Classifications} Once the pipeline has been completed, and run upon all sources, excellent analysis can then be conducted involving the specific morphologies. What will be of intense interest to myself will be building a link here between the existence of morphological structures and environment. I will also aim to cross-match any sources found here with existing catalogues of ancillary data to link in photometric parameterisations. Therefore, I aim to build links, specifically, between environmental density, the formation of galactic structures (such as bars or spirals) and photometric galactic parameters (such as star formation rates and stellar mass).
+
+\noindent \textbf{WP 3: Analysing Euclid Data and Creating Photometric Parameterisation} By the time the previous two WPs have been completed, the first few data releases from Euclid should be publicly available (or, at least, available within the consortium). I will spend the time here gauging the work required to build the ancillary catalogue to go with the morphological one. I will mess around with Euclid data, and investigate what reductions must be done with it. I will then utilise EAZY, LePhare and FAST to calculate photometric galaxy parameters of any overlapping data. I will then release this ancillary catalogue to the community. Assuming that there is sufficient overlap to build a statistically significant sample, I will investigate any links between environment, morphology and photometric parameters over this wider sample. At this stage, I will also begin to specifically select out interacting galaxies from the sample for WP 4.
+
+\noindent \textbf{WP 4: Use Case of Catalogue: Interacting Galaxies} In the final WP, I shall conduct a deep dive on using the new catalogue of objects specifically with regard to interacting galaxy. Using this large sample of photometrically confirmed interacting galaxies, I will investigate relations between the photometric parameters, interaction stage, the tidal features formed, nuclear activity and star formation rate enhancement. I will also apply my own algorithm to this sample, and explore the full parameter space of interaction and find which parameters lead to specific tidal features.
+\\
+\\
+% The first year of this project will primarily be focused on developing the code to extract excellent cutouts of all sources in the \texttt{Hubble} source catalogue. While I currently have the code to generate these cutouts from my internship, some refinements must be made. Specifically, the size of the cutout must be based upon the size of the source within it. This will ensure the source is fully resolved in the cutout; an issue discovered when keeping a fixed cutout size in the \citet{O'Ryan} catalogue. This time will also be used to test the accuracy of \texttt{Zoobot} through different \texttt{Hubble} filters and instruments. For these tests I will need to create training sets of different galaxies with full descriptions from Galaxy Zoo.
+
+% Once the code is created and tested, it will be run on the entire \texttt{Hubble} archives across all filters and instruments. The classification will take some time. From the creation of the \citet{O'Ryan} catalogue, 92 million sources took approximately one month to classify. As we add further source catalogues or instruments into our pipeline, the classification process itself may take more than this. We therefore schedule in 2.5 months for this process. As this process continues, I will shift my focus to the secondary goals of this project. I will begin to investigate Euclid data and get acquainted with it. I will focus my attention on interacting galaxies and further constraining the \citet{O'Ryan} catalogue. I will also have access to the results as they come in, allowing me to investigate the results and make some preliminary investigations into what we might find. I will also begin building the pipeline that will utilise the ancillary data to compute each galaxies parameterisation.
+
+% Finally, in the third year of this project, I will conduct the key analysis of the full catalogue we create. I will present an initial review of the parameter space we have covered as well as the limitations of the catalogue. I will the conduct an investigation into the different types of galaxies vs the parameterisations we have made. I will pick out the interacting galaxies for an example paper of how to use the catalogue, and do a in-depth exploration of their parameter space. To finalise the project, I will conduct my own analysis of the new interacting galaxy sample and apply the software developed in my PhD to completely match the underlying parameter space to tidal features that form. \\
+
+%%%% Rewrite above, but put it in terms of Work Packages with specific goals. 
+% Work Package 1: Building the pipeline that will conduct the classifications of the objects.
+% Work package 2: Analysing the resultant data from all objects in HSC. Also diagnosing model completeness, purity, etc.
+% Work Package 3: Combining with Ancillary data from Euclid. This includes checking Euclid data and applying photometric algorithms.
+% Work Package 4: Deep dive on interacting galaxies and conducitng their full parameterisation.
+
 \noindent\textbf{Expected Science Results} \\
-\noindent There are three primary papers that are expected to come from this project:
+\noindent Here, we describe the specific scientific outputs expected from each WP. Currently, they are simply the names of the papers expected, but can be expanded upon further on request.
+
 \begin{enumerate}[itemsep=0pt, parsep=0pt, topsep=0pt]
     \item Linking Morphology and Parameterisation: A Catalogue of N Galaxies with Ancillary and Morphological Data
     \item Leveraging Parameterisation: A Statistical Study Linking Galaxy Parameters to Galaxy Types
     \item A Complete Sample of Interacting Galaxies: An Initial Exploration \\
 \end{enumerate}
 
-Each of these titles links to a different stage of the primary project of this proposal.
-Then, there will be multiple secondary papers:
 \begin{enumerate}[itemsep=0pt, parsep=0pt, topsep=0pt]
     \item A Treasure Trove of the Archives: Morphological Classifications of N Galaxies from the \texttt{Hubble} Archives
     \item The Gems of the Archives: Release of a Catalogue of Rare Galaxy Types from the \texttt{Hubble} Archives
     \item Directly Investigating Interaction: Exploring the Underlying Parameter Space of a Statistically Robust Sample of Interacting Galaxies
 \end{enumerate}
 
-\vspace{-3mm}
 % See how I did this in the FlatIron proposal. And then we've just got to make the damn thing fit. 
 % Fit, re-read and then make sure we have everything!
 % \noindent \textbf{References}\\
